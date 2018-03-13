@@ -39,7 +39,7 @@ class TopListView extends Component {
     return (
       <ListView
         dataSource={this.state.dataSource}
-        renderRow={this.renderRow.bind(this)}
+        renderRow={this.renderRow}
         contentContainerStyle={styles.contentViewStyle}
         scrollEnabled={false}
          />

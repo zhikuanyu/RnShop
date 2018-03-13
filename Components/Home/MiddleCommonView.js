@@ -7,10 +7,20 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
+import PropTypes from 'prop-types';
+
 import Dimensions from 'Dimensions';
 const { width } = Dimensions.get('window');
 
 class MiddleCommonView extends Component {
+  static defaultProps = {
+    item: null
+  }
+
+  static propTypes = {
+    item: PropTypes.object.isRequired
+  }
+
   render() {
     return (
       <TouchableOpacity onPress={() => alert('点击了')}> 

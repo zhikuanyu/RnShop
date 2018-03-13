@@ -24,7 +24,7 @@ class TopView extends Component {
     this.state = {
       activePage: 0
     }
-    // this.renderIndicator = this.renderIndicator.bind(this)
+    this.onScrollAnimationEnd = this.onScrollAnimationEnd.bind(this);
   }
 
   // scrollview内部的组件
@@ -78,7 +78,7 @@ class TopView extends Component {
           horizontal={true}
           pagingEnabled={true}
           showsHorizontalScrollIndicator={false}
-          onMomentumScrollEnd = {this.onScrollAnimationEnd.bind(this)}
+          onMomentumScrollEnd = {this.onScrollAnimationEnd}
           >
           {this.renderScrollItem()}
         </ScrollView>

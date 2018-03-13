@@ -6,6 +6,7 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
+import PropTypes from 'prop-types';
 
 import icons from '../../Assets/icons';
 
@@ -16,6 +17,18 @@ import icons from '../../Assets/icons';
  */
 
 class BottomCommonCell extends Component {
+  static defaultProps = {
+    leftIcon: '',
+    leftTitle: '',
+    rightTitle: ''
+  }
+
+  static propTypes = {
+    leftIcon: PropTypes.string,
+    leftTitle: PropTypes.string,
+    rightTitle: PropTypes.string
+  }
+
   render() {
     return (
       <View style={styles.container}>

@@ -23,12 +23,13 @@ const REQUEST_URL = 'http://api.meituan.com/group/v2/recommend/homepage/city/20?
 class GuestYouLike extends Component {
   constructor(props) {
     super(props);
+    this.renderRow = this.renderRow.bind(this);
     this.state = {
       dataSource: new ListView.DataSource({rowHasChanged: (row1, row2) => row1 !== row2})
     }
   }
 
-  renderRows(dataItem) {
+  renderRow(dataItem) {
     return (
       <TouchableOpacity onPress={() => alert('ok')}>
         <View style={styles.itemBoxStyle}>
@@ -66,7 +67,7 @@ class GuestYouLike extends Component {
         <CommonCell leftIcon="cnxh" leftTitle="猜你喜欢" />
         <ListView
           dataSource={this.state.dataSource}
-          renderRow={this.renderRows.bind(this)} />
+          renderRow={this.renderRow} />
       </View>
     );
   }

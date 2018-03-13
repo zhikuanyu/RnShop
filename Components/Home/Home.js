@@ -19,10 +19,6 @@ import GuestYouLike from './GuestYouLike';
 let {width, height} = Dimensions.get('window');
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.pushToShopCenterDetail = this.pushToShopCenterDetail.bind(this);
-  }
 
   renderNavBar() {
     return (

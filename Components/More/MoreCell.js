@@ -15,7 +15,6 @@ class CommonCell extends Component {
     this.state = {
       isOn: false
     }
-    this.renderRightTitle.bind(this)
   }
 
   renderRightView() {

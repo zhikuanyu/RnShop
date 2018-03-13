@@ -8,6 +8,7 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
+import PropTypes from 'prop-types';
 
 import BottomCommonCell from './BottomCommonCell';
 
@@ -60,8 +61,22 @@ class ShopCenter extends Component {
 class ShopCenterItem extends Component {
   constructor(props) {
     super(props);
-    this.clickItem = this.clickItem.bind(this);
   }
+
+  static defaultProps = {
+    detailurl: '',
+    shopImage: '',
+    shopSale: '',
+    shopName: ''
+  }
+
+  static propTypes ={
+    detailurl: PropTypes.string,
+    shopImage: PropTypes.string,
+    shopSale: PropTypes.string,
+    shopName: PropTypes.string
+  }
+
   clickItem(url) {
     if (!url) return;
     this.props.popTopShopCenter(url);
